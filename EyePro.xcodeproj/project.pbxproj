@@ -9,11 +9,27 @@
 /* Begin PBXBuildFile section */
 		8368558C1B8DC8CE001CF4E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8368558B1B8DC8CE001CF4E5 /* main.m */; };
 		8368558F1B8DC8CE001CF4E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8368558E1B8DC8CE001CF4E5 /* AppDelegate.m */; };
-		836855921B8DC8CE001CF4E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836855911B8DC8CE001CF4E5 /* ViewController.m */; };
-		836855951B8DC8CE001CF4E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836855931B8DC8CE001CF4E5 /* Main.storyboard */; };
 		836855971B8DC8CE001CF4E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836855961B8DC8CE001CF4E5 /* Images.xcassets */; };
 		8368559A1B8DC8CE001CF4E5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836855981B8DC8CE001CF4E5 /* LaunchScreen.xib */; };
 		836855A61B8DC8CE001CF4E5 /* EyeProTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 836855A51B8DC8CE001CF4E5 /* EyeProTests.m */; };
+		836855E71B8DCFF2001CF4E5 /* libBLEDevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836855E61B8DCFF2001CF4E5 /* libBLEDevice.a */; };
+		836855EE1B8DF6B2001CF4E5 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836855E91B8DF6B2001CF4E5 /* MainViewController.m */; };
+		836855EF1B8DF6B2001CF4E5 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836855EA1B8DF6B2001CF4E5 /* MainViewController.xib */; };
+		836855F01B8DF6B2001CF4E5 /* PravicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836855EC1B8DF6B2001CF4E5 /* PravicyViewController.m */; };
+		836855F11B8DF6B2001CF4E5 /* PravicyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836855ED1B8DF6B2001CF4E5 /* PravicyViewController.xib */; };
+		836855F31B8DF7BC001CF4E5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836855F21B8DF7BC001CF4E5 /* AVFoundation.framework */; };
+		836855F51B8DF7D1001CF4E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836855F41B8DF7D1001CF4E5 /* UIKit.framework */; };
+		836856051B8E09E4001CF4E5 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 836855FA1B8E09E4001CF4E5 /* Icon-76.png */; };
+		836856061B8E09E4001CF4E5 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 836855FB1B8E09E4001CF4E5 /* Icon-76@2x.png */; };
+		836856071B8E09E4001CF4E5 /* Icon-76@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 836855FC1B8E09E4001CF4E5 /* Icon-76@3x.png */; };
+		836856081B8E09E4001CF4E5 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 836855FD1B8E09E4001CF4E5 /* Icon-Small.png */; };
+		836856091B8E09E4001CF4E5 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 836855FE1B8E09E4001CF4E5 /* Icon-Small@2x.png */; };
+		8368560A1B8E09E4001CF4E5 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 836855FF1B8E09E4001CF4E5 /* Icon-Small@3x.png */; };
+		8368560B1B8E09E4001CF4E5 /* Icon-Spotlight-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 836856001B8E09E4001CF4E5 /* Icon-Spotlight-40.png */; };
+		8368560C1B8E09E4001CF4E5 /* Icon-Spotlight-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 836856011B8E09E4001CF4E5 /* Icon-Spotlight-40@2x.png */; };
+		8368560D1B8E09E4001CF4E5 /* Icon-Spotlight-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 836856021B8E09E4001CF4E5 /* Icon-Spotlight-40@3x.png */; };
+		8368560E1B8E09E4001CF4E5 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 836856031B8E09E4001CF4E5 /* iTunesArtwork */; };
+		8368560F1B8E09E4001CF4E5 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 836856041B8E09E4001CF4E5 /* iTunesArtwork@2x */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +48,31 @@
 		8368558B1B8DC8CE001CF4E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8368558D1B8DC8CE001CF4E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8368558E1B8DC8CE001CF4E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		836855901B8DC8CE001CF4E5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		836855911B8DC8CE001CF4E5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		836855941B8DC8CE001CF4E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		836855961B8DC8CE001CF4E5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		836855991B8DC8CE001CF4E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8368559F1B8DC8CE001CF4E5 /* EyeProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyeProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		836855A41B8DC8CE001CF4E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		836855A51B8DC8CE001CF4E5 /* EyeProTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyeProTests.m; sourceTree = "<group>"; };
+		836855E61B8DCFF2001CF4E5 /* libBLEDevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBLEDevice.a; path = "../BLEDevice/build/Debug-iphoneos/libBLEDevice.a"; sourceTree = "<group>"; };
+		836855E81B8DF6B2001CF4E5 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		836855E91B8DF6B2001CF4E5 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		836855EA1B8DF6B2001CF4E5 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		836855EB1B8DF6B2001CF4E5 /* PravicyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PravicyViewController.h; sourceTree = "<group>"; };
+		836855EC1B8DF6B2001CF4E5 /* PravicyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PravicyViewController.m; sourceTree = "<group>"; };
+		836855ED1B8DF6B2001CF4E5 /* PravicyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PravicyViewController.xib; sourceTree = "<group>"; };
+		836855F21B8DF7BC001CF4E5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		836855F41B8DF7D1001CF4E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		836855FA1B8E09E4001CF4E5 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76.png"; path = "icons/Icon-76.png"; sourceTree = "<group>"; };
+		836855FB1B8E09E4001CF4E5 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76@2x.png"; path = "icons/Icon-76@2x.png"; sourceTree = "<group>"; };
+		836855FC1B8E09E4001CF4E5 /* Icon-76@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76@3x.png"; path = "icons/Icon-76@3x.png"; sourceTree = "<group>"; };
+		836855FD1B8E09E4001CF4E5 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "icons/Icon-Small.png"; sourceTree = "<group>"; };
+		836855FE1B8E09E4001CF4E5 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "icons/Icon-Small@2x.png"; sourceTree = "<group>"; };
+		836855FF1B8E09E4001CF4E5 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@3x.png"; path = "icons/Icon-Small@3x.png"; sourceTree = "<group>"; };
+		836856001B8E09E4001CF4E5 /* Icon-Spotlight-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight-40.png"; path = "icons/Icon-Spotlight-40.png"; sourceTree = "<group>"; };
+		836856011B8E09E4001CF4E5 /* Icon-Spotlight-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight-40@2x.png"; path = "icons/Icon-Spotlight-40@2x.png"; sourceTree = "<group>"; };
+		836856021B8E09E4001CF4E5 /* Icon-Spotlight-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight-40@3x.png"; path = "icons/Icon-Spotlight-40@3x.png"; sourceTree = "<group>"; };
+		836856031B8E09E4001CF4E5 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = icons/iTunesArtwork; sourceTree = "<group>"; };
+		836856041B8E09E4001CF4E5 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iTunesArtwork@2x"; path = "icons/iTunesArtwork@2x"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +80,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				836855F51B8DF7D1001CF4E5 /* UIKit.framework in Frameworks */,
+				836855F31B8DF7BC001CF4E5 /* AVFoundation.framework in Frameworks */,
+				836855E71B8DCFF2001CF4E5 /* libBLEDevice.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +99,9 @@
 		8368557D1B8DC8CE001CF4E5 = {
 			isa = PBXGroup;
 			children = (
+				836855F41B8DF7D1001CF4E5 /* UIKit.framework */,
+				836855F21B8DF7BC001CF4E5 /* AVFoundation.framework */,
+				836855E61B8DCFF2001CF4E5 /* libBLEDevice.a */,
 				836855881B8DC8CE001CF4E5 /* EyePro */,
 				836855A21B8DC8CE001CF4E5 /* EyeProTests */,
 				836855871B8DC8CE001CF4E5 /* Products */,
@@ -81,11 +120,11 @@
 		836855881B8DC8CE001CF4E5 /* EyePro */ = {
 			isa = PBXGroup;
 			children = (
+				836855F81B8E09B8001CF4E5 /* images */,
+				836855F71B8E09A0001CF4E5 /* Controller */,
+				836855F61B8E0999001CF4E5 /* View */,
 				8368558D1B8DC8CE001CF4E5 /* AppDelegate.h */,
 				8368558E1B8DC8CE001CF4E5 /* AppDelegate.m */,
-				836855901B8DC8CE001CF4E5 /* ViewController.h */,
-				836855911B8DC8CE001CF4E5 /* ViewController.m */,
-				836855931B8DC8CE001CF4E5 /* Main.storyboard */,
 				836855961B8DC8CE001CF4E5 /* Images.xcassets */,
 				836855981B8DC8CE001CF4E5 /* LaunchScreen.xib */,
 				836855891B8DC8CE001CF4E5 /* Supporting Files */,
@@ -117,6 +156,52 @@
 				836855A41B8DC8CE001CF4E5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		836855F61B8E0999001CF4E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				836855EA1B8DF6B2001CF4E5 /* MainViewController.xib */,
+				836855ED1B8DF6B2001CF4E5 /* PravicyViewController.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		836855F71B8E09A0001CF4E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				836855E81B8DF6B2001CF4E5 /* MainViewController.h */,
+				836855E91B8DF6B2001CF4E5 /* MainViewController.m */,
+				836855EB1B8DF6B2001CF4E5 /* PravicyViewController.h */,
+				836855EC1B8DF6B2001CF4E5 /* PravicyViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		836855F81B8E09B8001CF4E5 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				836855F91B8E09D6001CF4E5 /* icon */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		836855F91B8E09D6001CF4E5 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				836855FA1B8E09E4001CF4E5 /* Icon-76.png */,
+				836855FB1B8E09E4001CF4E5 /* Icon-76@2x.png */,
+				836855FC1B8E09E4001CF4E5 /* Icon-76@3x.png */,
+				836855FD1B8E09E4001CF4E5 /* Icon-Small.png */,
+				836855FE1B8E09E4001CF4E5 /* Icon-Small@2x.png */,
+				836855FF1B8E09E4001CF4E5 /* Icon-Small@3x.png */,
+				836856001B8E09E4001CF4E5 /* Icon-Spotlight-40.png */,
+				836856011B8E09E4001CF4E5 /* Icon-Spotlight-40@2x.png */,
+				836856021B8E09E4001CF4E5 /* Icon-Spotlight-40@3x.png */,
+				836856031B8E09E4001CF4E5 /* iTunesArtwork */,
+				836856041B8E09E4001CF4E5 /* iTunesArtwork@2x */,
+			);
+			name = icon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +253,11 @@
 				TargetAttributes = {
 					836855851B8DC8CE001CF4E5 = {
 						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					8368559E1B8DC8CE001CF4E5 = {
 						CreatedOnToolsVersion = 6.4;
@@ -199,9 +289,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				836855951B8DC8CE001CF4E5 /* Main.storyboard in Resources */,
+				8368560F1B8E09E4001CF4E5 /* iTunesArtwork@2x in Resources */,
+				836856081B8E09E4001CF4E5 /* Icon-Small.png in Resources */,
+				8368560D1B8E09E4001CF4E5 /* Icon-Spotlight-40@3x.png in Resources */,
 				8368559A1B8DC8CE001CF4E5 /* LaunchScreen.xib in Resources */,
+				836855EF1B8DF6B2001CF4E5 /* MainViewController.xib in Resources */,
+				836856091B8E09E4001CF4E5 /* Icon-Small@2x.png in Resources */,
+				836856051B8E09E4001CF4E5 /* Icon-76.png in Resources */,
 				836855971B8DC8CE001CF4E5 /* Images.xcassets in Resources */,
+				836856061B8E09E4001CF4E5 /* Icon-76@2x.png in Resources */,
+				836856071B8E09E4001CF4E5 /* Icon-76@3x.png in Resources */,
+				8368560E1B8E09E4001CF4E5 /* iTunesArtwork in Resources */,
+				8368560A1B8E09E4001CF4E5 /* Icon-Small@3x.png in Resources */,
+				8368560B1B8E09E4001CF4E5 /* Icon-Spotlight-40.png in Resources */,
+				8368560C1B8E09E4001CF4E5 /* Icon-Spotlight-40@2x.png in Resources */,
+				836855F11B8DF6B2001CF4E5 /* PravicyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +321,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				836855921B8DC8CE001CF4E5 /* ViewController.m in Sources */,
 				8368558F1B8DC8CE001CF4E5 /* AppDelegate.m in Sources */,
+				836855EE1B8DF6B2001CF4E5 /* MainViewController.m in Sources */,
 				8368558C1B8DC8CE001CF4E5 /* main.m in Sources */,
+				836855F01B8DF6B2001CF4E5 /* PravicyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +347,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		836855931B8DC8CE001CF4E5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				836855941B8DC8CE001CF4E5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		836855981B8DC8CE001CF4E5 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -304,6 +399,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
+				USER_HEADER_SEARCH_PATHS = "$(BUILD_DIR)/include/**";
 			};
 			name = Debug;
 		};
@@ -341,6 +437,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
+				USER_HEADER_SEARCH_PATHS = "$(BUILD_DIR)/include/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -349,8 +446,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (9664RHS9A8)";
 				INFOPLIST_FILE = EyePro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/zhangzhiyang/Desktop/EyePro/BLEDevice/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -359,8 +461,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (9664RHS9A8)";
 				INFOPLIST_FILE = EyePro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/zhangzhiyang/Desktop/EyePro/BLEDevice/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -418,6 +525,7 @@
 				836855AB1B8DC8CE001CF4E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		836855AC1B8DC8CE001CF4E5 /* Build configuration list for PBXNativeTarget "EyeProTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +534,7 @@
 				836855AE1B8DC8CE001CF4E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
