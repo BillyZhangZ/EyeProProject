@@ -30,6 +30,15 @@
 		8368560D1B8E09E4001CF4E5 /* Icon-Spotlight-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 836856021B8E09E4001CF4E5 /* Icon-Spotlight-40@3x.png */; };
 		8368560E1B8E09E4001CF4E5 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 836856031B8E09E4001CF4E5 /* iTunesArtwork */; };
 		8368560F1B8E09E4001CF4E5 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 836856041B8E09E4001CF4E5 /* iTunesArtwork@2x */; };
+		836856111B8E8821001CF4E5 /* empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 836856101B8E8821001CF4E5 /* empty.png */; };
+		836856161B935022001CF4E5 /* OtaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836856141B935022001CF4E5 /* OtaViewController.m */; };
+		836856171B935022001CF4E5 /* OtaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836856151B935022001CF4E5 /* OtaViewController.xib */; };
+		8368561A1B93563A001CF4E5 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 836856191B93563A001CF4E5 /* GraphView.m */; };
+		8368561E1B940EC8001CF4E5 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8368561C1B940EC8001CF4E5 /* SettingViewController.m */; };
+		8368561F1B940EC8001CF4E5 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8368561D1B940EC8001CF4E5 /* SettingViewController.xib */; };
+		836856221B941003001CF4E5 /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 836856211B941003001CF4E5 /* Setting.m */; };
+		836856251B94596A001CF4E5 /* Statistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 836856241B94596A001CF4E5 /* Statistics.m */; };
+		8368562A1B957A52001CF4E5 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836856271B957A52001CF4E5 /* libWeChatSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +82,22 @@
 		836856021B8E09E4001CF4E5 /* Icon-Spotlight-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight-40@3x.png"; path = "icons/Icon-Spotlight-40@3x.png"; sourceTree = "<group>"; };
 		836856031B8E09E4001CF4E5 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = icons/iTunesArtwork; sourceTree = "<group>"; };
 		836856041B8E09E4001CF4E5 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iTunesArtwork@2x"; path = "icons/iTunesArtwork@2x"; sourceTree = "<group>"; };
+		836856101B8E8821001CF4E5 /* empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = empty.png; path = images/empty.png; sourceTree = "<group>"; };
+		836856131B935022001CF4E5 /* OtaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtaViewController.h; sourceTree = "<group>"; };
+		836856141B935022001CF4E5 /* OtaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtaViewController.m; sourceTree = "<group>"; };
+		836856151B935022001CF4E5 /* OtaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtaViewController.xib; sourceTree = "<group>"; };
+		836856181B93563A001CF4E5 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
+		836856191B93563A001CF4E5 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
+		8368561B1B940EC8001CF4E5 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		8368561C1B940EC8001CF4E5 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		8368561D1B940EC8001CF4E5 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		836856201B941003001CF4E5 /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
+		836856211B941003001CF4E5 /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
+		836856231B94596A001CF4E5 /* Statistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Statistics.h; sourceTree = "<group>"; };
+		836856241B94596A001CF4E5 /* Statistics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Statistics.m; sourceTree = "<group>"; };
+		836856271B957A52001CF4E5 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = EyePro/WXAPI/libWeChatSDK.a; sourceTree = "<group>"; };
+		836856281B957A52001CF4E5 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXApi.h; path = EyePro/WXAPI/WXApi.h; sourceTree = "<group>"; };
+		836856291B957A52001CF4E5 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = EyePro/WXAPI/WXApiObject.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +107,7 @@
 			files = (
 				836855F51B8DF7D1001CF4E5 /* UIKit.framework in Frameworks */,
 				836855F31B8DF7BC001CF4E5 /* AVFoundation.framework in Frameworks */,
+				8368562A1B957A52001CF4E5 /* libWeChatSDK.a in Frameworks */,
 				836855E71B8DCFF2001CF4E5 /* libBLEDevice.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +125,7 @@
 		8368557D1B8DC8CE001CF4E5 = {
 			isa = PBXGroup;
 			children = (
+				836856261B957A3C001CF4E5 /* WXAPI */,
 				836855F41B8DF7D1001CF4E5 /* UIKit.framework */,
 				836855F21B8DF7BC001CF4E5 /* AVFoundation.framework */,
 				836855E61B8DCFF2001CF4E5 /* libBLEDevice.a */,
@@ -120,9 +147,10 @@
 		836855881B8DC8CE001CF4E5 /* EyePro */ = {
 			isa = PBXGroup;
 			children = (
-				836855F81B8E09B8001CF4E5 /* images */,
-				836855F71B8E09A0001CF4E5 /* Controller */,
+				836856121B92CEA5001CF4E5 /* Model */,
 				836855F61B8E0999001CF4E5 /* View */,
+				836855F71B8E09A0001CF4E5 /* Controller */,
+				836855F81B8E09B8001CF4E5 /* images */,
 				8368558D1B8DC8CE001CF4E5 /* AppDelegate.h */,
 				8368558E1B8DC8CE001CF4E5 /* AppDelegate.m */,
 				836855961B8DC8CE001CF4E5 /* Images.xcassets */,
@@ -161,8 +189,12 @@
 		836855F61B8E0999001CF4E5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				836856181B93563A001CF4E5 /* GraphView.h */,
+				836856191B93563A001CF4E5 /* GraphView.m */,
+				836856151B935022001CF4E5 /* OtaViewController.xib */,
 				836855EA1B8DF6B2001CF4E5 /* MainViewController.xib */,
 				836855ED1B8DF6B2001CF4E5 /* PravicyViewController.xib */,
+				8368561D1B940EC8001CF4E5 /* SettingViewController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -170,10 +202,14 @@
 		836855F71B8E09A0001CF4E5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				836856131B935022001CF4E5 /* OtaViewController.h */,
+				836856141B935022001CF4E5 /* OtaViewController.m */,
 				836855E81B8DF6B2001CF4E5 /* MainViewController.h */,
 				836855E91B8DF6B2001CF4E5 /* MainViewController.m */,
 				836855EB1B8DF6B2001CF4E5 /* PravicyViewController.h */,
 				836855EC1B8DF6B2001CF4E5 /* PravicyViewController.m */,
+				8368561B1B940EC8001CF4E5 /* SettingViewController.h */,
+				8368561C1B940EC8001CF4E5 /* SettingViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -181,6 +217,7 @@
 		836855F81B8E09B8001CF4E5 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				836856101B8E8821001CF4E5 /* empty.png */,
 				836855F91B8E09D6001CF4E5 /* icon */,
 			);
 			name = images;
@@ -202,6 +239,27 @@
 				836856041B8E09E4001CF4E5 /* iTunesArtwork@2x */,
 			);
 			name = icon;
+			sourceTree = "<group>";
+		};
+		836856121B92CEA5001CF4E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				836856201B941003001CF4E5 /* Setting.h */,
+				836856211B941003001CF4E5 /* Setting.m */,
+				836856231B94596A001CF4E5 /* Statistics.h */,
+				836856241B94596A001CF4E5 /* Statistics.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		836856261B957A3C001CF4E5 /* WXAPI */ = {
+			isa = PBXGroup;
+			children = (
+				836856271B957A52001CF4E5 /* libWeChatSDK.a */,
+				836856281B957A52001CF4E5 /* WXApi.h */,
+				836856291B957A52001CF4E5 /* WXApiObject.h */,
+			);
+			name = WXAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +311,7 @@
 				TargetAttributes = {
 					836855851B8DC8CE001CF4E5 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 3A3Q6559K4;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -290,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8368560F1B8E09E4001CF4E5 /* iTunesArtwork@2x in Resources */,
+				8368561F1B940EC8001CF4E5 /* SettingViewController.xib in Resources */,
 				836856081B8E09E4001CF4E5 /* Icon-Small.png in Resources */,
 				8368560D1B8E09E4001CF4E5 /* Icon-Spotlight-40@3x.png in Resources */,
 				8368559A1B8DC8CE001CF4E5 /* LaunchScreen.xib in Resources */,
@@ -300,10 +360,12 @@
 				836856061B8E09E4001CF4E5 /* Icon-76@2x.png in Resources */,
 				836856071B8E09E4001CF4E5 /* Icon-76@3x.png in Resources */,
 				8368560E1B8E09E4001CF4E5 /* iTunesArtwork in Resources */,
+				836856111B8E8821001CF4E5 /* empty.png in Resources */,
 				8368560A1B8E09E4001CF4E5 /* Icon-Small@3x.png in Resources */,
 				8368560B1B8E09E4001CF4E5 /* Icon-Spotlight-40.png in Resources */,
 				8368560C1B8E09E4001CF4E5 /* Icon-Spotlight-40@2x.png in Resources */,
 				836855F11B8DF6B2001CF4E5 /* PravicyViewController.xib in Resources */,
+				836856171B935022001CF4E5 /* OtaViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +384,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8368558F1B8DC8CE001CF4E5 /* AppDelegate.m in Sources */,
+				836856251B94596A001CF4E5 /* Statistics.m in Sources */,
 				836855EE1B8DF6B2001CF4E5 /* MainViewController.m in Sources */,
+				836856221B941003001CF4E5 /* Setting.m in Sources */,
+				836856161B935022001CF4E5 /* OtaViewController.m in Sources */,
+				8368561E1B940EC8001CF4E5 /* SettingViewController.m in Sources */,
+				8368561A1B93563A001CF4E5 /* GraphView.m in Sources */,
 				8368558C1B8DC8CE001CF4E5 /* main.m in Sources */,
 				836855F01B8DF6B2001CF4E5 /* PravicyViewController.m in Sources */,
 			);
@@ -446,14 +513,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (9664RHS9A8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhiyang Zhang (K7LJHX8EVS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EyePro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/zhangzhiyang/Desktop/EyePro/BLEDevice/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/EyePro/WXAPI",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "$(BUILD_DIR)/include/** /Users/zhangzhiyang/Desktop/EyePro/BLEDevice/**";
 			};
 			name = Debug;
 		};
@@ -461,14 +532,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (9664RHS9A8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhiyang Zhang (K7LJHX8EVS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EyePro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/zhangzhiyang/Desktop/EyePro/BLEDevice/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/EyePro/WXAPI",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "$(BUILD_DIR)/include/** /Users/zhangzhiyang/Desktop/EyePro/BLEDevice/**";
 			};
 			name = Release;
 		};

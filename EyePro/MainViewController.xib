@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
                 <outlet property="CounterLabel" destination="t9J-jV-BMX" id="4RL-0Y-uUs"/>
+                <outlet property="navigationBar" destination="bXh-gY-TTl" id="zHF-f3-9gU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,26 +17,59 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9J-jV-BMX">
-                    <rect key="frame" x="0.0" y="100" width="600" height="100"/>
+                    <rect key="frame" x="0.0" y="64" width="600" height="100"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="eE5-dF-DfR"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="健康度" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Az-lR-IWA">
-                    <rect key="frame" x="293" y="278" width="51" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bXh-gY-TTl">
+                    <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Giy-uX-Owc"/>
+                    </constraints>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="EyePro" id="sLE-RZ-Xxr">
+                            <barButtonItem key="leftBarButtonItem" id="HIi-pi-WR6">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nU4-No-99g">
+                                    <rect key="frame" x="16" y="7" width="40" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="设置">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="onSettingButton:" destination="-1" eventType="touchUpInside" id="bOP-Fc-cCd"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" id="SAU-VL-N7O">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XXO-Mm-c3I">
+                                    <rect key="frame" x="451" y="7" width="40" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="分享">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="onShareButton:" destination="-1" eventType="touchUpInside" id="YUA-9c-EwE"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="bXh-gY-TTl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="7Rf-tX-9Vt"/>
                 <constraint firstAttribute="trailing" secondItem="t9J-jV-BMX" secondAttribute="trailing" id="CE4-1b-Bdo"/>
-                <constraint firstItem="t9J-jV-BMX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="d45-oa-dcL"/>
+                <constraint firstAttribute="trailing" secondItem="bXh-gY-TTl" secondAttribute="trailing" id="M0d-s1-m2t"/>
                 <constraint firstItem="t9J-jV-BMX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dNh-b4-Vcj"/>
+                <constraint firstItem="t9J-jV-BMX" firstAttribute="top" secondItem="bXh-gY-TTl" secondAttribute="bottom" id="ewT-U0-gEc"/>
+                <constraint firstItem="bXh-gY-TTl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="stj-uu-wa2"/>
             </constraints>
         </view>
     </objects>

@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Statistics.h"
+#import "Setting.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property Setting *setting;
+@property Statistics *statistic;
 -(void)say:(NSString *)sth;
 - (NSString*)getPreferredLanguage;
+
+-(void)sendImageContent: (UIImage*)viewImage withScene:(int)scene;
+-(void)sendTextContent: (NSString *)text withScene:(int)scene;
 @end
 

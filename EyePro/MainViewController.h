@@ -10,5 +10,6 @@
 
 @interface MainViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *CounterLabel;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 
 @end

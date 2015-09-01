@@ -10,10 +10,15 @@
 #import "AVFoundation/AVAudioSession.h"
 #import <AVFoundation/AVFoundation.h>
 #import "MainViewController.h"
-@interface AppDelegate ()
+#import "WXApi.h"
+//locked&&changed ->>locked    locked&&(~changed) ->> unlocked
+#define SCREEN_LOCK_STATE_CHANGED 0x01
+#define SCREEN_LOCK_STATE_LOCKED 0x02
+@interface AppDelegate ()<WXApiDelegate>
 {
     MainViewController *_mainVC;
 }
+@property NSInteger screenLockState;
 @end
 
 @implementation AppDelegate
@@ -21,6 +26,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+      
     application.statusBarOrientation = UIInterfaceOrientationPortrait;
     
     // create window
@@ -28,6 +34,15 @@
         // create the default workout panel
     _mainVC = [[MainViewController alloc] init];
     self.window.rootViewController = _mainVC;
+    _setting = [[Setting alloc]init];
+    _statistic = [[Statistics alloc]init];
+    
+    //向微信注册pao123应用，同时已经在target info里面添加了URL types
+    [WXApi registerApp:@"wx9d60ab46bfa2d903" withDescription:@"runhelper"];
+    
+
+    
+    //keep app in background
     NSError *setCategoryErr = nil;
     NSError *activationErr  = nil;
     [[AVAudioSession sharedInstance]
@@ -43,7 +58,24 @@
                                                                                    categories:nil];
         [[UIApplication sharedApplication] registerUserNotificationSettings:noteSetting];
     }
+    // 应用程序右上角数字
+    UIApplication *app = [UIApplication sharedApplication];
+    app.applicationIconBadgeNumber = 0;
     
+    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), //center
+                                    (void*)self, // observer (can be NULL)
+                                    lockStateChanged, // callback
+                                    CFSTR("com.apple.springboard.lockstate"), // event name
+                                    NULL, // object
+                                    CFNotificationSuspensionBehaviorDeliverImmediately);
+    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), //center
+                                    (void*)self, // observer (can be NULL)
+                                    lockStateComplete, // callback
+                                    CFSTR("com.apple.springboard.lockcomplete"), // event name
+                                    NULL, // object
+                                    CFNotificationSuspensionBehaviorDeliverImmediately);
+
+    self.screenLockState = SCREEN_LOCK_STATE_CHANGED;
     [self.window makeKeyAndVisible];
 
     return YES;
@@ -87,6 +119,141 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma  WX Delegate
+
+/*该函数不用用户主动掉用*/
+-(void) onReq:(BaseReq*)req
+{
+    if([req isKindOfClass:[GetMessageFromWXReq class]])
+    {
+        // 微信请求App提供内容， 需要app提供内容后使用sendRsp返回
+        /*
+         NSString *strTitle = [NSString stringWithFormat:@"微信请求App提供内容"];
+         NSString *strMsg = @"微信请求App提供内容，App要调用sendResp:GetMessageFromWXResp返回给微信";
+         
+         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:strTitle message:strMsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+         alert.tag = 1000;
+         [alert show];
+         [alert release];*/
+    }
+    else if([req isKindOfClass:[ShowMessageFromWXReq class]])
+    {
+        //显示微信传过来的内容
+        /*
+         ShowMessageFromWXReq* temp = (ShowMessageFromWXReq*)req;
+         WXMediaMessage *msg = temp.message;
+         
+         
+         WXAppExtendObject *obj = msg.mediaObject;
+         
+         NSString *strTitle = [NSString stringWithFormat:@"微信请求App显示内容"];
+         NSString *strMsg = [NSString stringWithFormat:@"标题：%@ \n内容：%@ \n附带信息：%@ \n缩略图:%u bytes\n\n", msg.title, msg.description, obj.extInfo, msg.thumbData.length];
+         
+         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:strTitle message:strMsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+         [alert show];
+         [alert release];*/
+    }
+    else if([req isKindOfClass:[LaunchFromWXReq class]])
+    {
+        //从微信启动App
+        /*
+         NSString *strTitle = [NSString stringWithFormat:@"从微信启动"];
+         NSString *strMsg = @"这是从微信启动的消息";
+         */
+    }
+    
+}
+/*该函数不用用户主动掉用*/
+-(void) onResp:(BaseResp*)resp
+{
+    //send to timeline or session reponse, runhelper can alert some info here
+    if([resp isKindOfClass:[SendMessageToWXResp class]])
+    {
+        /*
+         NSString *strTitle = [NSString stringWithFormat:@"发送媒体消息结果"];
+         NSString *strMsg = [NSString stringWithFormat:@"errcode:%d", resp.errCode];
+         */
+    }
+    
+}
+/*分享图片给好友/朋友圈/收藏
+ WXSceneSession 好友,
+ WXSceneTimeline 朋友圈,
+ WXSceneFavorite  收藏,
+ */
+-(void)sendImageContent: (UIImage*)viewImage withScene:(int)scene
+{
+    WXMediaMessage *message = [WXMediaMessage message];
+    message.title = @"123go";
+    message.description = @"让跑步称为一种习惯";
+    message.mediaTagName = @"123go科技";
+    [message setThumbImage:[UIImage imageNamed:@"maps.png"]];
+    
+    WXImageObject *ext = [WXImageObject object];
+    ext.imageData = UIImagePNGRepresentation(viewImage);
+    message.mediaObject = ext;
+    
+    SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+    req.bText = NO;
+    req.message = message;
+    req.scene =  scene;
+    
+    [WXApi sendReq:req];
+    
+    
+    [WXApi sendReq:req];
+    
+}
+
+/*分享文字给好友/朋友圈/收藏
+ WXSceneSession 好友,
+ WXSceneTimeline 朋友圈,
+ WXSceneFavorite  收藏,
+ */
+- (void) sendTextContent: (NSString *)text withScene:(int)scene
+{
+    SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+    req.text = text;//@"我的选择，叮叮跑步";
+    req.bText = YES;
+    req.scene = scene;
+    
+    [WXApi sendReq:req];
+}
+
+
+static void lockStateChanged(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
+    NSLog(@"lock state changed!");
+    if (observer != NULL) {
+       AppDelegate *app = (__bridge AppDelegate*)observer;
+        app.screenLockState = SCREEN_LOCK_STATE_CHANGED;
+    
+    }
+    // you might try inspecting the `userInfo` dictionary, to see
+    //  if it contains any useful info
+    if (userInfo != nil) {
+        CFShow(userInfo);
+    }
+}
+
+static void lockStateComplete(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
+    NSLog(@"lock complete!");
+    if (observer != NULL) {
+        AppDelegate *app = (__bridge AppDelegate*)observer;
+        app.screenLockState = SCREEN_LOCK_STATE_LOCKED;
+        
+    }
+    
+    // you might try inspecting the `userInfo` dictionary, to see
+    //  if it contains any useful info
+    if (userInfo != nil) {
+        CFShow(userInfo);
+    }
+}
+
+-(void)clearScreenLockState
+{
 }
 
 -(void)say:(NSString *)sth
