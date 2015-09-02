@@ -12,13 +12,10 @@
 #import "MainViewController.h"
 #import "WXApi.h"
 //locked&&changed ->>locked    locked&&(~changed) ->> unlocked
-#define SCREEN_LOCK_STATE_CHANGED 0x01
-#define SCREEN_LOCK_STATE_LOCKED 0x02
 @interface AppDelegate ()<WXApiDelegate>
 {
     MainViewController *_mainVC;
 }
-@property NSInteger screenLockState;
 @end
 
 @implementation AppDelegate
@@ -38,7 +35,7 @@
     _statistic = [[Statistics alloc]init];
     
     //向微信注册pao123应用，同时已经在target info里面添加了URL types
-    [WXApi registerApp:@"wx9d60ab46bfa2d903" withDescription:@"runhelper"];
+    [WXApi registerApp:@"wx4e273ad9562d9cb0" withDescription:@"eyePro"];
     
 
     
@@ -75,7 +72,7 @@
                                     NULL, // object
                                     CFNotificationSuspensionBehaviorDeliverImmediately);
 
-    self.screenLockState = SCREEN_LOCK_STATE_CHANGED;
+    self.screenLockState = SCREEN_LOCK_STATE_INIT;
     [self.window makeKeyAndVisible];
 
     return YES;
@@ -227,8 +224,13 @@ static void lockStateChanged(CFNotificationCenterRef center, void *observer, CFS
     NSLog(@"lock state changed!");
     if (observer != NULL) {
        AppDelegate *app = (__bridge AppDelegate*)observer;
-        app.screenLockState = SCREEN_LOCK_STATE_CHANGED;
-    
+        if (app.screenLockState & SCREEN_LOCK_STATE_LOCKED) {
+            if (app.screenLockState & SCREEN_LOCK_STATE_CHANGED) {
+                app.screenLockState = SCREEN_LOCK_STATE_INIT;
+            }
+            else
+            app.screenLockState |= SCREEN_LOCK_STATE_CHANGED;
+        }
     }
     // you might try inspecting the `userInfo` dictionary, to see
     //  if it contains any useful info
@@ -241,7 +243,7 @@ static void lockStateComplete(CFNotificationCenterRef center, void *observer, CF
     NSLog(@"lock complete!");
     if (observer != NULL) {
         AppDelegate *app = (__bridge AppDelegate*)observer;
-        app.screenLockState = SCREEN_LOCK_STATE_LOCKED;
+        app.screenLockState |= SCREEN_LOCK_STATE_LOCKED;
         
     }
     

@@ -17,10 +17,6 @@
 @interface MainViewController ()< HeartRateDelegate>
 {
     NSTimer *_timer;
-    BOOL _voiceHelper;
-    BOOL _pushHelper;
-    BOOL _brightHelper;
-    NSInteger _counter;
     HeartRateDevice *_hd;
     GraphView *_graphView;
 
@@ -29,21 +25,14 @@
 
 @implementation MainViewController
 
--(instancetype)init
-{
-    self = [super init];
-    if (self) {
-         _counter = 0;
-    }
-    return self;
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"empty.png"] forBarMetrics:UIBarMetricsDefault];
-    self.view.backgroundColor = PROTECT_COLOR;
-    self.navigationBar.tintColor = CONTENT_COLOR;
+    //self.view.backgroundColor = PROTECT_COLOR;
+   // self.navigationBar.tintColor = CONTENT_COLOR;
     self.CounterLabel.textColor = CONTENT_COLOR;
-    _voiceHelper = _pushHelper = _brightHelper = true;
+    self.CounterLabel.text = [NSString stringWithFormat:@"提醒次数\t\t0"];
+
      _hd = [[HeartRateDevice alloc]init:self];
     _timer = [NSTimer scheduledTimerWithTimeInterval:15.0 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
 
@@ -89,24 +78,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - disable landscape
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (BOOL)shouldAutorotate
+{
+    return NO;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+
 -(void)onTimer
 {
-    AppDelegate *app = [[UIApplication sharedApplication]delegate];
-    Setting *set = [app setting];
-    Statistics *statistic = [app statistic];
-    statistic.totalWarningTimes++;
-    self.CounterLabel.text = [NSString stringWithFormat:@"%ld",statistic.totalWarningTimes];
-    
-    if (set.voiceHelper) {
-        [self voiceHelper];
-    }
-    if (set.pushHelper) {
-        [self pushHelper];
-    }
-    if (set.brightHelper) {
-        [self brightHelper];
-    }
-     [[UIScreen mainScreen]setBrightness:0.5f];
 
 }
 
@@ -146,24 +137,68 @@
     }
 }
 
--(void)brightHelper
+-(void)brightHelper:(float)brightness
 {
     //float brightness = [[UIScreen mainScreen]brightness];
+    [[UIScreen mainScreen]setBrightness:brightness];
+}
+
+-(void)onDataUpdated:(int)data
+{
+   
+    AppDelegate *app = [[UIApplication sharedApplication]delegate];
+    Setting *set = [app setting];
+    Statistics *statistic = [app statistic];
+    NSLog(@"screen lock state %ld", app.screenLockState);
+    //已经锁屏，取消提醒
+    if (app.screenLockState == SCREEN_LOCK_STATE_MASK) {
+        return;
+    }
     
+    //距离没问题
+    if (data < 80) {
+        return;
+    }
+    
+    statistic.totalWarningTimes++;
+    self.CounterLabel.text = [NSString stringWithFormat:@"提醒次数\t\t%ld",statistic.totalWarningTimes];
+    
+    if (set.voiceHelper) {
+        [self voiceHelper];
+    }
+    if (set.pushHelper) {
+        [self pushHelper];
+    }
+    
+    if (set.brightHelper) {
+        [[UIScreen mainScreen]setBrightness: (float)(data%100)/100.0f];
+    }
 }
 -(void)didUpdateHeartRate:(unsigned short)heartRate
 {
-
-}
+    static int conuter = 0;
+    
+    if (conuter++ == 10) {
+        conuter = 0;
+        if (heartRate > 80) {
+            [self onDataUpdated:heartRate];
+            
+        }
+    }
+    NSLog(@"heart rate available");
+    }
 
 -(void)isheartRateAvailable:(BOOL)available
-{}
+{
+    NSLog(@"heart rate available %d",available);
+}
 
 
 - (IBAction)onSettingButton:(id)sender {
     SettingViewController *vc = [[SettingViewController alloc]init];
     [self presentViewController:vc animated:YES completion:nil];
 }
+
 - (IBAction)onShareButton:(id)sender {
     AppDelegate *app = [[UIApplication sharedApplication]delegate];
     [app sendTextContent:@"hello world" withScene:WXSceneSession];

@@ -39,6 +39,7 @@
 		836856221B941003001CF4E5 /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 836856211B941003001CF4E5 /* Setting.m */; };
 		836856251B94596A001CF4E5 /* Statistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 836856241B94596A001CF4E5 /* Statistics.m */; };
 		8368562A1B957A52001CF4E5 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836856271B957A52001CF4E5 /* libWeChatSDK.a */; };
+		8368562C1B969ED7001CF4E5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8368562B1B969ED7001CF4E5 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		836856271B957A52001CF4E5 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = EyePro/WXAPI/libWeChatSDK.a; sourceTree = "<group>"; };
 		836856281B957A52001CF4E5 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXApi.h; path = EyePro/WXAPI/WXApi.h; sourceTree = "<group>"; };
 		836856291B957A52001CF4E5 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = EyePro/WXAPI/WXApiObject.h; sourceTree = "<group>"; };
+		8368562B1B969ED7001CF4E5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8368562C1B969ED7001CF4E5 /* QuartzCore.framework in Frameworks */,
 				836855F51B8DF7D1001CF4E5 /* UIKit.framework in Frameworks */,
 				836855F31B8DF7BC001CF4E5 /* AVFoundation.framework in Frameworks */,
 				8368562A1B957A52001CF4E5 /* libWeChatSDK.a in Frameworks */,
@@ -125,6 +128,7 @@
 		8368557D1B8DC8CE001CF4E5 = {
 			isa = PBXGroup;
 			children = (
+				8368562B1B969ED7001CF4E5 /* QuartzCore.framework */,
 				836856261B957A3C001CF4E5 /* WXAPI */,
 				836855F41B8DF7D1001CF4E5 /* UIKit.framework */,
 				836855F21B8DF7BC001CF4E5 /* AVFoundation.framework */,
