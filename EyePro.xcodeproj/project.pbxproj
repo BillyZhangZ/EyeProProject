@@ -38,8 +38,8 @@
 		8368561F1B940EC8001CF4E5 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8368561D1B940EC8001CF4E5 /* SettingViewController.xib */; };
 		836856221B941003001CF4E5 /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 836856211B941003001CF4E5 /* Setting.m */; };
 		836856251B94596A001CF4E5 /* Statistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 836856241B94596A001CF4E5 /* Statistics.m */; };
-		8368562A1B957A52001CF4E5 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836856271B957A52001CF4E5 /* libWeChatSDK.a */; };
 		8368562C1B969ED7001CF4E5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8368562B1B969ED7001CF4E5 /* QuartzCore.framework */; };
+		83B5CD8F1C9D3EF0009DFA80 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836856271B957A52001CF4E5 /* libWeChatSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,10 +107,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B5CD8F1C9D3EF0009DFA80 /* libWeChatSDK.a in Frameworks */,
 				8368562C1B969ED7001CF4E5 /* QuartzCore.framework in Frameworks */,
 				836855F51B8DF7D1001CF4E5 /* UIKit.framework in Frameworks */,
 				836855F31B8DF7BC001CF4E5 /* AVFoundation.framework in Frameworks */,
-				8368562A1B957A52001CF4E5 /* libWeChatSDK.a in Frameworks */,
 				836855E71B8DCFF2001CF4E5 /* libBLEDevice.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,7 +519,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Zhiyang Zhang (K7LJHX8EVS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EyePro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -538,7 +540,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Zhiyang Zhang (K7LJHX8EVS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EyePro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

@@ -142,7 +142,7 @@
     //float brightness = [[UIScreen mainScreen]brightness];
     [[UIScreen mainScreen]setBrightness:brightness];
 }
-
+//0x31~0x34 from far to near
 -(void)onDataUpdated:(int)data
 {
    
@@ -156,7 +156,7 @@
     }
     
     //距离没问题
-    if (data < 80) {
+    if (data < 0x32) {
         return;
     }
     
@@ -178,13 +178,13 @@
 {
     static int conuter = 0;
     
-    if (conuter++ == 10) {
+   // if (conuter++ == 10) {
         conuter = 0;
-        if (heartRate > 80) {
+      //  if (heartRate > 80) {
             [self onDataUpdated:heartRate];
             
-        }
-    }
+       // }
+  //  }
     NSLog(@"heart rate available");
     }
 

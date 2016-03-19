@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E377A294D408C9D4922F98F6149ED1D897BEE4EC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F9FE0C9584897F74925A91E11ED11D0FD034D8A4" : 0,
+    "E377A294D408C9D4922F98F6149ED1D897BEE4EC" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "931B5627-F813-4180-B9E0-317C70C441FA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F9FE0C9584897F74925A91E11ED11D0FD034D8A4" : "BLEDevice\/",
+    "E377A294D408C9D4922F98F6149ED1D897BEE4EC" : "EyePro\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "EyePro",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "EyePro.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/BillyZhangZ\/EyeProProject.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E377A294D408C9D4922F98F6149ED1D897BEE4EC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/BillyZhangZ\/EyePro.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F9FE0C9584897F74925A91E11ED11D0FD034D8A4"
+    }
+  ]
+}
